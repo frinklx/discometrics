@@ -1,21 +1,23 @@
-# DiscoMetrics 🎮
+# dmetrics 🚀
 
-A powerful CLI tool for viewing Discord user statistics and analytics with beautiful terminal visualizations.
+A beautiful command-line tool for viewing GitHub user statistics and analytics with stunning terminal visualizations.
 
 ## Features
 
-- View detailed user information
-- See user roles and status
-- Display recent activities
-- Visualize account activity over time
-- Beautiful terminal UI with graphs and panels
+- 👤 Detailed GitHub user profile information
+- 📊 Repository statistics and analytics
+- 🔤 Programming language distribution
+- 📈 Contribution activity graphs
+- ⭐ Star counts and statistics
+- 🔄 User comparison functionality
+- 🎨 Beautiful terminal UI with graphs and panels
 
 ## Installation
 
 1. Clone this repository:
 ```bash
 git clone <repository-url>
-cd discometrics
+cd dmetrics
 ```
 
 2. Install the required dependencies:
@@ -23,45 +25,50 @@ cd discometrics
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the project root and add your Discord bot token:
-```
-DISCORD_TOKEN=your_discord_bot_token_here
-```
-
-To get a Discord bot token:
-1. Go to the [Discord Developer Portal](https://discord.com/developers/applications)
-2. Create a new application
-3. Go to the Bot section and create a bot
-4. Copy the bot token and paste it in your `.env` file
+3. (Optional) Set up a GitHub token for increased API rate limits:
+- Go to GitHub Settings → Developer Settings → Personal Access Tokens
+- Generate a new token with `read:user` and `repo` scopes
+- Save it for use with the `--token` flag
 
 ## Usage
 
-View user statistics:
+### View user statistics
 ```bash
-python discometrics.py stats USERNAME
+python dmetrics.py stats USERNAME
 ```
 
-Replace `USERNAME` with the Discord username you want to analyze.
-
-## Example
-
+With GitHub token:
 ```bash
-python discometrics.py stats "JohnDoe"
+python dmetrics.py stats USERNAME --token YOUR_GITHUB_TOKEN
 ```
 
-This will display:
-- User information in a beautiful panel
-- Account creation date
-- Current status and roles
-- Recent activities
-- Activity graph over time
+### Compare two users
+```bash
+python dmetrics.py compare USER1 USER2
+```
+
+## Example Output
+
+The tool provides:
+- User profile information in a beautiful panel
+- Repository and contribution statistics
+- Language distribution visualization
+- Contribution activity graphs
+- Comparative analytics between users
 
 ## Requirements
 
 - Python 3.7+
-- Discord Bot Token
 - Required packages (listed in requirements.txt)
+- GitHub Personal Access Token (optional, but recommended)
+
+## Tips
+
+- Use a GitHub token to avoid API rate limits
+- The comparison feature helps you benchmark against other developers
+- Language distribution shows your tech stack diversity
+- Activity graphs help track your GitHub engagement
 
 ## Note
 
-Make sure your Discord bot is invited to the servers where you want to analyze users. The bot needs appropriate permissions to view user information. 
+This tool respects GitHub's API rate limits. Using a personal access token is recommended for the best experience. 
