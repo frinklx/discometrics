@@ -1,0 +1,8 @@
+README.md
+setup.py
+dmetrics.egg-info/PKG-INFO
+dmetrics.egg-info/SOURCES.txt
+dmetrics.egg-info/dependency_links.txt
+dmetrics.egg-info/entry_points.txt
+dmetrics.egg-info/requires.txt
+dmetrics.egg-info/top_level.txt

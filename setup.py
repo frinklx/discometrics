@@ -20,4 +20,15 @@ setup(
             "dmetrics=dmetrics.cli:app",
         ],
     },
+    python_requires=">=3.7",
+    author="Your Name",
+    description="A beautiful dark-mode GitHub analytics CLI",
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/yourusername/dmetrics",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 ) 
