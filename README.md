@@ -1,19 +1,32 @@
 # dmetrics 🚀
 
-A beautiful command-line tool for viewing GitHub user statistics and analytics with stunning terminal visualizations.
+A beautiful dark-mode command-line tool for viewing GitHub user statistics and analytics with stunning terminal visualizations.
 
 ## Features
 
 - 👤 Detailed GitHub user profile information
 - 📊 Repository statistics and analytics
-- 🔤 Programming language distribution
-- 📈 Contribution activity graphs
+- 🔤 Programming language distribution with dark mode graphs
+- 📈 Contribution activity visualization
 - ⭐ Star counts and statistics
 - 🔄 User comparison functionality
-- 🎨 Beautiful terminal UI with graphs and panels
+- 🎨 Beautiful dark-mode terminal UI
+- 🌟 Top repositories showcase
+- 📅 Contribution streak tracking
+- 🔗 Social links and contact information
+- ⚙️ Configuration management
+- 🌐 Quick profile opening in browser
 
 ## Installation
 
+### Using pip (Recommended)
+```bash
+pip install .
+```
+
+The `dmetrics` command will be available globally in your terminal.
+
+### Manual Installation
 1. Clone this repository:
 ```bash
 git clone <repository-url>
@@ -25,36 +38,88 @@ cd dmetrics
 pip install -r requirements.txt
 ```
 
-3. (Optional) Set up a GitHub token for increased API rate limits:
-- Go to GitHub Settings → Developer Settings → Personal Access Tokens
-- Generate a new token with `read:user` and `repo` scopes
-- Save it for use with the `--token` flag
+## Configuration
+
+Set up your GitHub token (recommended to avoid API rate limits):
+
+```bash
+dmetrics config --token YOUR_GITHUB_TOKEN
+```
+
+View current configuration:
+```bash
+dmetrics config --show
+```
+
+Clear configuration:
+```bash
+dmetrics config --clear
+```
 
 ## Usage
 
 ### View user statistics
 ```bash
-python dmetrics.py stats USERNAME
+dmetrics stats USERNAME
 ```
 
-With GitHub token:
+With a one-time token:
 ```bash
-python dmetrics.py stats USERNAME --token YOUR_GITHUB_TOKEN
+dmetrics stats USERNAME --token YOUR_GITHUB_TOKEN
+```
+
+Save token while viewing stats:
+```bash
+dmetrics stats USERNAME --token YOUR_GITHUB_TOKEN --save
 ```
 
 ### Compare two users
 ```bash
-python dmetrics.py compare USER1 USER2
+dmetrics compare USER1 USER2
+```
+
+### Open user's GitHub profile
+```bash
+dmetrics open USERNAME
 ```
 
 ## Example Output
 
 The tool provides:
-- User profile information in a beautiful panel
+- User profile information in a sleek dark panel
 - Repository and contribution statistics
 - Language distribution visualization
 - Contribution activity graphs
+- Top repositories showcase
 - Comparative analytics between users
+- Contribution streak information
+
+## Features in Detail
+
+### Profile Information
+- Name and bio
+- Location and company
+- Email and website
+- Twitter username
+- Contribution statistics
+
+### Repository Analytics
+- Total public repositories
+- Star count across all repos
+- Top repositories by stars
+- Fork counts
+- Primary languages
+
+### Activity Metrics
+- Contribution count
+- Current streak
+- Recent activity graph
+- Language distribution
+
+### Comparison Features
+- Side-by-side user comparison
+- Metric-by-metric analysis
+- Visual differentiation
 
 ## Requirements
 
@@ -65,6 +130,7 @@ The tool provides:
 ## Tips
 
 - Use a GitHub token to avoid API rate limits
+- Save your token using the config command for convenience
 - The comparison feature helps you benchmark against other developers
 - Language distribution shows your tech stack diversity
 - Activity graphs help track your GitHub engagement
